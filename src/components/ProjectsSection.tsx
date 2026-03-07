@@ -5,6 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Typewriter } from "@/components/ui/typewriter";
 
 export function ProjectsSection() {
     const projects = [
@@ -12,31 +13,31 @@ export function ProjectsSection() {
             title: "EDU-BRIDGE",
             description: "A learning platform I built with next.js, react, prisma, that connects students, teachers, parents, and school community in one platform. Features include user authentication, live chat, information of student like attendance, marks, rank, and a course marketplace.",
             tech: ["Next.js", "React", "Prisma"],
-            github: "https://github.com/Gifti21",
+            github: "https://github.com/Gifti21/EDU-BRIDGE",
         },
         {
             title: "Online Order Restaurant Menu",
             description: "A responsive, single-page application that allows customers to browse a restaurant's menu and place orders. Built with HTML, JS, and CSS.",
             tech: ["HTML", "CSS", "JavaScript"],
-            github: "https://github.com/Gifti21",
+            github: "https://github.com/Gifti21/M-Restaurant-Menu",
+        },
+        {
+            title: "Visit Ethiopia",
+            description: "A tourism website showcasing the beauty and culture of Ethiopia. Features interactive galleries, travel guides, and destination information.",
+            tech: ["HTML", "CSS", "JavaScript"],
+            github: "https://github.com/Gifti21/Visit-Ethiopia",
         },
         {
             title: "Personal Portfolio Website",
             description: "This website (source code available on GitHub) showcases my resume, projects, and contact information. Developed using React, Next.js, and Tailwind CSS to practice modern responsive design.",
             tech: ["Next.js", "React", "Tailwind CSS"],
-            github: "https://github.com/Gifti21",
-        },
-        {
-            title: "To-do List App",
-            description: "A simple React application for tracking tasks. Implements CRUD operations and local storage persistence; used to learn component state and hooks.",
-            tech: ["React"],
-            github: "https://github.com/Gifti21",
+            github: "https://github.com/Gifti21/my-portfolio",
         },
         {
             title: "Calculator",
             description: "A vanilla JavaScript calculator supporting basic arithmetic. Created as an exercise in DOM manipulation and event handling.",
             tech: ["JavaScript", "HTML", "CSS"],
-            github: "https://github.com/Gifti21",
+            github: "https://github.com/Gifti21/calculator",
         },
         {
             title: "Others",
@@ -62,7 +63,7 @@ export function ProjectsSection() {
                     className="text-center mb-20"
                 >
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground inline-block relative tracking-tighter">
-                        My Projects
+                        <Typewriter words={["My Projects"]} loop={false} cursorClassName="bg-cyan-400 ml-1" />
                         <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-1.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent rounded-full opacity-80" />
                     </h2>
                 </motion.div>

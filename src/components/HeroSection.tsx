@@ -36,11 +36,11 @@ export function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-transparent z-0" />
 
             {/* Deep Space Ambient Glows */}
-            <div className="absolute top-1/4 left-1/4 w-[40rem] h-[40rem] bg-emerald-500/10 rounded-full blur-[120px] -z-10 mix-blend-screen animate-float" />
-            <div className="absolute bottom-1/4 right-1/4 w-[40rem] h-[40rem] bg-teal-600/10 rounded-full blur-[120px] -z-10 mix-blend-screen animate-float" style={{ animationDelay: "-3s" }} />
+            <div className="absolute top-1/4 left-1/4 w-[40rem] h-[40rem] bg-blue-500/10 rounded-full blur-[120px] -z-10 mix-blend-screen animate-float" />
+            <div className="absolute bottom-1/4 right-1/4 w-[40rem] h-[40rem] bg-cyan-600/10 rounded-full blur-[120px] -z-10 mix-blend-screen animate-float" style={{ animationDelay: "-3s" }} />
 
             <div className="container mx-auto px-6 max-w-6xl relative z-10">
-                <div className="flex flex-col-reverse md:flex-row items-center gap-12 lg:gap-20">
+                <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
 
                     {/* Photo on the LEFT */}
                     <motion.div
@@ -50,9 +50,9 @@ export function HeroSection() {
                         className="flex-1 flex justify-center md:justify-end w-full relative group"
                     >
                         {/* Spotlight Glow Behind Photo */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-emerald-400 via-primary to-teal-600 rounded-full w-64 h-64 md:w-80 md:h-80 mx-auto md:ml-auto md:mr-0 opacity-40 blur-3xl group-hover:opacity-70 group-hover:scale-110 transition-all duration-700" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-400 via-cyan-500 to-sky-500 rounded-full w-64 h-64 md:w-80 md:h-80 mx-auto md:ml-auto md:mr-0 opacity-40 blur-3xl group-hover:opacity-70 group-hover:scale-110 transition-all duration-700" />
 
-                        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-[3px] bg-gradient-to-tr from-emerald-400 via-primary to-teal-600 shadow-[0_0_80px_rgba(13,148,136,0.2)] animate-float">
+                        <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-[3px] bg-gradient-to-tr from-blue-400 via-cyan-500 to-sky-500 shadow-[0_0_80px_rgba(59,130,246,0.4)] animate-float animate-glow">
                             <div className="w-full h-full rounded-full overflow-hidden bg-background border-[6px] border-background relative">
                                 <Image
                                     src="/profile.png"
@@ -72,14 +72,19 @@ export function HeroSection() {
                         animate="visible"
                         className="flex-1 flex flex-col items-center text-center md:items-start md:text-left w-full"
                     >
-                        <motion.span variants={itemVariants} className="inline-block py-2 px-6 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm font-bold tracking-widest uppercase mb-6 backdrop-blur-md shadow-[0_0_20px_rgba(16,185,129,0.15)]">
+                        <motion.span variants={itemVariants} className="inline-block py-2 px-6 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-sm font-bold tracking-widest uppercase mb-6 backdrop-blur-md shadow-[0_0_30px_rgba(59,130,246,0.2)] animate-glow">
                             Available for new opportunities
                         </motion.span>
 
                         <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-foreground mb-4 leading-tight">
-                            Hi, I'm <br className="hidden md:block" />
                             <span className="text-gradient drop-shadow-2xl">
-                                <Typewriter words={["MEDHANIT TESFAYE"]} loop={false} cursorClassName="bg-emerald-400 ml-1" />
+                                <Typewriter
+                                    words={["Hi, I'm Medhanit Tesfaye"]}
+                                    finalText="Hi, I'm Medhanit"
+                                    loop={false}
+                                    cursorClassName="bg-cyan-400 ml-1"
+                                    typingSpeed={80}
+                                />
                             </span> <span className="inline-block animate-bounceOrigin text-4xl transform hover:rotate-12 transition-transform cursor-default">👋</span>
                         </motion.h1>
 
@@ -88,7 +93,7 @@ export function HeroSection() {
                         </motion.p>
 
                         <motion.div variants={itemVariants} className="flex flex-wrap items-center justify-center md:justify-start gap-5">
-                            <Button asChild size="lg" className="relative group overflow-hidden rounded-full shadow-[0_0_40px_rgba(16,185,129,0.3)] px-8 py-6 text-base font-bold transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(16,185,129,0.5)] bg-gradient-to-r from-emerald-500 to-primary text-white border-none">
+                            <Button asChild size="lg" className="relative group overflow-hidden rounded-full shadow-[0_0_40px_rgba(59,130,246,0.4)] px-8 py-6 text-base font-bold transition-all hover:scale-105 hover:shadow-[0_0_80px_rgba(59,130,246,0.7)] bg-gradient-to-r from-blue-500 to-cyan-500 text-white border-none animate-glow">
                                 <a href="#projects">
                                     <span className="relative z-10">View my work</span>
                                     <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out" />
@@ -108,10 +113,10 @@ export function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 2, duration: 1 }}
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-emerald-500/70 animate-bounce hidden md:flex"
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-blue-500/70 animate-bounce hidden md:flex"
             >
-                <div className="w-8 h-12 rounded-full border-2 border-emerald-500/30 flex justify-center pt-2 mb-2 backdrop-blur-sm">
-                    <div className="w-1.5 h-3 bg-emerald-400 rounded-full animate-pulse" />
+                <div className="w-8 h-12 rounded-full border-2 border-blue-500/30 flex justify-center pt-2 mb-2 backdrop-blur-sm">
+                    <div className="w-1.5 h-3 bg-blue-400 rounded-full animate-pulse" />
                 </div>
             </motion.div>
         </section>

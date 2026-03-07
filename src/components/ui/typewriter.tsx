@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 
 interface TypewriterProps {
     words: string[];
+    finalText?: string;
     typingSpeed?: number;
     deletingSpeed?: number;
     pauseDuration?: number;
@@ -14,6 +15,7 @@ interface TypewriterProps {
 
 export function Typewriter({
     words,
+    finalText,
     typingSpeed = 100,
     deletingSpeed = 50,
     pauseDuration = 2000,
@@ -44,6 +46,12 @@ export function Typewriter({
             if (currentText === currentWord) {
                 if (!loop && currentWordIndex === words.length - 1) {
                     setIsFinished(true);
+                    // If finalText is provided, set it after a brief pause
+                    if (finalText) {
+                        setTimeout(() => {
+                            setCurrentText(finalText);
+                        }, 500);
+                    }
                     return;
                 }
                 timer = setTimeout(() => {
@@ -57,7 +65,7 @@ export function Typewriter({
         }
 
         return () => clearTimeout(timer);
-    }, [currentText, isDeleting, currentWordIndex, words, typingSpeed, deletingSpeed, pauseDuration, loop, isFinished]);
+    }, [currentText, isDeleting, currentWordIndex, words, typingSpeed, deletingSpeed, pauseDuration, loop, isFinished, finalText]);
 
     return (
         <span className="inline-block min-w-[20px]">

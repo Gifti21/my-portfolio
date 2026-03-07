@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Download, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Typewriter } from "@/components/ui/typewriter";
 
 export function ResumeSection() {
     return (
@@ -26,7 +27,7 @@ export function ResumeSection() {
                     </div>
 
                     <h2 className="text-3xl md:text-5xl font-extrabold text-foreground tracking-tight mb-6">
-                        Resume
+                        <Typewriter words={["Resume"]} loop={false} cursorClassName="bg-violet-500 ml-1" />
                     </h2>
 
                     <p className="text-lg md:text-xl text-muted-foreground font-light max-w-2xl mx-auto mb-10 leading-relaxed">

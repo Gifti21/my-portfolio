@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Code2, Blocks, Wrench } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Typewriter } from "@/components/ui/typewriter";
 
 export function SkillsSection() {
     const customVariant = {
@@ -45,7 +46,7 @@ export function SkillsSection() {
                 >
                     <div className="mb-20 text-center">
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground inline-block relative tracking-tighter">
-                            Technical Skills
+                            <Typewriter words={["Technical Skills"]} loop={false} cursorClassName="bg-violet-500 ml-1" />
                             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-1.5 bg-gradient-to-r from-transparent via-violet-500 to-transparent rounded-full opacity-80" />
                         </h2>
                     </div>
